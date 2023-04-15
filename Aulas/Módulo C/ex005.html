@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primeiros passos com DOM</title>
+    <style>
+      body {
+        background: darkslategray;
+        color: white;
+        font: normal 18pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <div id="msg">Clique em mim</div>
+    <p>Aprendendo a usar <strong>DOM</strong> em Javascript</p>
+    <!-- <script>
+      window.document.write("Olá, Mundo!");
+      window.document.write(window.document.charset);
+      window.document.write(window.navigator.appName);
+      window.document.write(window.document.URL);
+    </script>
+    <script>
+      //Selecionar por tag name / marca
+      var p1 = window.document.getElementsByTagName("p")[0]; //Seleciona 1º paragrafo
+      var p2 = window.document.getElementsByTagName("p")[1]; //Seleciona 2º paragrafo
+      var corpo = window.document.body;
+
+      window.document.write("No primeiro parágrafo está escrito: " + p1.innerText + "<br>");
+      corpo.style.background = "#2E6171";
+      p1.style.color = "blue";
+
+      document.write(p2.innerText + "<br>");
+      document.write(p2.innerHTML + "<br>");
+      //window.alert(p2.innerText);
+    </script> -->
+    <!-- <script>
+      //Selecionar por ID
+      var d = window.document.getElementById("msg");
+      var n = window.document.getElementsByName("msg")[0];
+      d.style.background = "green";
+      d.innerText = "Estou aguardando...";
+      //Selecionar por Name
+      n.innerText = "Olá!";
+    </script> -->
+    <script>
+      //Selecionar por Seletor
+      var d = window.document.querySelector("div#msg"); // . para class e # para ID
+      d.style.color = "blue";
+      d.style.background = "red";
+    </script>
+  </body>
+</html>
