@@ -8,14 +8,23 @@
   </head>
   <body>
     <h1>Insira sua nacionalidade abaixo</h1>
-    <input type="text" name="nacio" id="nacio" />
-    <input type="button" value="Verificar" onclick="analisar()" />
-    <div id="resposta"></div>
+    <input type="text" name="txtnacao" id="txtnacao" />
+    <input type="button" value="Verificar" onclick="verificar()" />
+    <div id="res"></div>
+
     <script>
-      function analisar() {
-        var pais = window.document.querySelector("input#nacio");
-        var res = window.document.getElementById("resposta");
-        
+      function verificar() {
+        var txtn = window.document.querySelector("input#txtnacao");
+        var res = window.document.querySelector("div#res");
+        var nacao = String(txtn.value);
+
+        res.innerHTML = `<p>Sua nação é ${nacao}</p>`;
+
+        if (nacao == "Brasil") {
+          res.innerHTML += "<p>Você é brasileiro!</p>";
+        } else {
+          res.innerHTML += "<p>Você é estrangeiro!</p>";
+        }
       }
     </script>
   </body>
